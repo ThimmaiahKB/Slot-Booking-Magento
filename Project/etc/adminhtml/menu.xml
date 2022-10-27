@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codilar_Project::booking" title="Booking" translate="main" module="Codilar_Project" sortOrder="50" resource="Codilar_Project::booking" />
+        <add id="Codilar_Project::timeslot" title="Slot" translate="content" module="Codilar_Project" parent="Codilar_Project::booking" sortOrder="10" dependsOnModule="Codilar_Project" action="slot/slot" resource="Codilar_Project::timeslot"/>
+    </menu>
+</config>

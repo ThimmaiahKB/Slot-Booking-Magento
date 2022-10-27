@@ -1,0 +1,42 @@
+<?php if ($block->canShowBlock()): ?>
+    <div class="slotmain">
+<h2>Book Your Slot Now</h2>
+<form class="" action="<?php echo $this->getAddPostUrl(); ?>" id="codilar-project-form" method="post">
+    <fieldset class="fieldset">
+    <h4><label for="datepicker">Select Date : </label></h4>
+    <input type="text" name="datepicker" id="datepicker" placeholder="select date" class="datepicker" autocomplete="off" required>
+    <script>
+        require(["jquery", "mage/calendar"], function($){
+            $("#datepicker").datepicker({
+                showMonthAfterYear: false,
+                dateFormat:'yy-dd-mm',
+                changeMonth: true,
+                changeYear: true,
+                yearRange: '2000:2020',
+            })
+        });
+    </script>
+        <h4><label for="datepicker">Select time : </label></h4>
+        <select name="slot" id="slot" class="timepicker"required>
+        <option value="" disabled selected hidden>Please Choose...</option>
+            <optgroup label="Morning">
+            <option value="1">6:00AM-7:00AM</option>
+            <option value="2">7:00AM-8:00AM</option>
+            <option value="3">8:00AM-9:00AM</option>
+            <option value="4">10:00AM-11:00AM</option>
+            <option value="5">11:00AM-12:00PM</option>
+            <optgroup label="Afternoon">
+                <option value="6">1:00PM-2:00PM</option>
+                <option value="7">3:00PM-4:00PM</option>
+                <option value="8">4:00PM-5:00PM</option>
+                <option value="9">4:00PM-5:00PM</option>
+                <option value="10">5:00PM-6:00PM</option>
+            </optgroup>
+      </select>
+    </fieldset>
+    <button type="submit" title="Submit" class="action submit primary">
+        <span>Book</span>
+    </button>
+</form>
+    </div>
+<?php endif; ?>
